@@ -1,0 +1,73 @@
+public abstract class PlanetaryBody {
+
+	private String name;
+	private double mass;
+	private Point position;
+	private int id;
+	private static int counter = 0;
+	
+	PlanetaryBody(String name, double mass, Point position){
+		setName(name);
+		setMass(mass);
+		setPosition(position);
+		id = counter;
+		counter++;
+	}
+
+	/**
+	 * @return the name
+	 */
+	public  String getName() {
+		return name;
+	}
+	
+	/**
+	 * @param name the name to set
+	 */
+	public  void setName(String name) {
+		this.name =name;
+	}
+	/**
+	 * @return the mass
+	 */
+	public  double getMass() {
+		return mass;
+	}
+	
+	/**
+	 * @param mass the mass to set
+	 */
+	public  void setMass(double mass) {
+		this.mass= mass;
+	}
+	
+	/**
+	 * @return the position
+	 */
+	public Point getPosition() {
+		return position;
+	}
+	/**
+	 * @param position the position to set
+	 */
+	public  void setPosition(Point position) {
+		this.position= position;
+	}
+	/**
+	 * @return the id
+	 */
+	public  int getId() {
+		return id;
+	}
+
+
+	public abstract PlanetType getType();
+
+	@Override
+	public String toString() {
+		return "PlanetaryBody [name=" + name + ", mass=" + mass + ", position=" + position + ", id=" + id + "]";
+	}
+	
+
+
+}
