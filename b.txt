@@ -1,5 +1,5 @@
 public abstract class PlanetaryBody {
-
+ riprova 
 	private String name;
 	private double mass;
 	private Point position;
